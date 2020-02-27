@@ -1,0 +1,40 @@
+package com.dailycodingproblem.dailyone;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class DailyOne {
+
+	public static void main(String[] args) {
+		
+		List<Integer> listaNumeros = new ArrayList<Integer>();
+		Scanner numeros= null;
+		
+		System.out.println("Deseja adicionar quantos números na lista?");
+		numeros = new Scanner(System.in);
+		int auxNumeros = numeros.nextInt();
+			
+		for(int i = 1; i <= auxNumeros; i++) {
+			System.out.println("Informe o " + i + "º número:");
+			numeros = new Scanner(System.in);
+			listaNumeros.add(numeros.nextInt());
+		}
+		
+		System.out.println("Informe outro número para verificar se ele é resultado da soma dos números da lista");
+		numeros = new Scanner(System.in);
+		auxNumeros = numeros.nextInt();
+		
+		numeros.close();
+		
+		for (Integer i : listaNumeros) {
+			for (Integer j : listaNumeros) {
+				if((i + j) == auxNumeros) {
+					
+				}
+			}		
+		}
+		
+		System.out.println(listaNumeros);
+	}
+}

@@ -1,0 +1,28 @@
+package com.dailycodingproblem.dailyone;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class DailyOne {
+
+	public static void main(String[] args) {
+		
+		List<Integer> listaNumeros = new ArrayList<Integer>();
+		Scanner numeros= null;
+		
+		if(listaNumeros.isEmpty()) {
+			System.out.println("Deseja adicionar quantos números na lista?");
+			numeros = new Scanner(System.in);
+			int auxQtdNumeros = numeros.nextInt();
+			
+			for(int i = 1; i <= auxQtdNumeros; i++) {
+				System.out.println("Informe o " + i + "º número:");
+				numeros = new Scanner(System.in);
+				listaNumeros.add(numeros.nextInt());
+			}
+			numeros.close();
+		}
+		System.out.println(listaNumeros);
+	}
+}
